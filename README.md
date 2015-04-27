@@ -1,6 +1,6 @@
-Hugo port of Photon by <a href="http://www.gregboggs.com">Greg Boggs</a>
+Hugo port of <a href="http://html5up.net/photon">Photon</a> by <a href="http://www.gregboggs.com">Greg Boggs</a>.
 
-A simple (gradient-heavy) single pager Fully responsive, built on Sass,
+A simple (gradient-heavy) single pager that is fully responsive, built on Sass,
 and loaded with an assortment of pre-styled elements.
 
 License
@@ -8,8 +8,8 @@ License
 	Hugo Theme:
 		GPL 3
 
-        Design, HTML, and CSS:
-		Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Design, HTML, and CSS:
+		Free for personal and commercial use under the CCA 3.0 license.
                 AJ (n33.co @n33co dribbble.com/n33)
 
 	Images:

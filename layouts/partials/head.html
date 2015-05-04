@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -6,11 +11,15 @@
 
   <!-- Enable responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
   <title>{{ .Title }} &middot; {{ .Site.Author.name }}</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/styles.css">
+	<link rel="stylesheet" href="{{ .Site.BaseUrl }}css/skel.css" />
+	<link rel="stylesheet" href="{{ .Site.BaseUrl }}css/style.css" />
+	<link rel="stylesheet" href="{{ .Site.BaseUrl }}css/style-wide.css" />
+	<link rel="stylesheet" href="{{ .Site.BaseUrl }}css/style-noscript.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="{{ .Site.BaseUrl }}css/ie/v8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="{{ .Site.BaseUrl }}css/ie/v9.css" /><![endif]-->
   {{ if isset .Site.Params "highlight" }}
     <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/highlight/{{ .Site.Params.highlight }}.css">
   {{ end }}
@@ -29,6 +38,5 @@
   <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}">
   <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ if gt $index 0 }},{{ end }}{{ . }}{{ else }}{{ .Site.Params.defaultKeywords }}{{ end }}">
 </head>
-<body{{ with .Site.Params.theme }} class="{{ . }}"{{ end }}>
+{{ with .Params.theme }}<body class="{{ . }}">{{else}}<body class="index">{{ end }}
   {{ partial "top.html" . }}
-  {{ partial "sidebar.html" . }}

@@ -1,9 +1,28 @@
-<div class="header">
-  <a class="brand" href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a>
-  <ul class="menu top-menu">
-    <li class="nav-item"><a href="{{ .Site.BaseUrl }}/">Home</a></li>
-    {{ range .Site.Menus.top }}
-      <li>class="nav-item"><a href="{{ .Permalink  }}">{{ .LinkTitle }}</a></li>
-    {{ end }}
-  </ul>
-</div>
+<!-- Header -->
+<header id="header" class="alt">
+	<h1 id="logo"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
+	<nav id="nav">
+			<!-- top menu start-->
+			<ul>
+				{{ $currentNode := . }}
+				{{ range .Site.Menus.top }}
+					{{ if .HasChildren }}
+						<li{{if $currentNode.HasMenuCurrent "main" . }} class="current"{{end}}>
+							<ul>
+								{{ range .Children }}
+									<li{{if $currentNode.IsMenuCurrent "top" . }} class="current"{{end}}>
+										<a href="{{.Url}}">{{ .Pre }}{{ .Name }}</a>
+									</li>
+								{{ end }}
+							</ul>
+					{{else}}
+						<li>
+							<a href="{{.Url}}">{{ .Pre }}{{ .Name }}</a>
+						</li>
+					{{end}}
+				{{end}}
+				<li><a href="#" class="button special">Sign Up</a></li>
+			</ul>
+			<!-- top menu end-->
+	</nav>
+</header>

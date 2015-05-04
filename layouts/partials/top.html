@@ -1,6 +1,6 @@
 <!-- Header -->
 <header id="header" class="alt">
-	<h1 id="logo"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
+	<h1 id="logo"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }} {{ with .Site.Params.tagline }}<span>- {{ . }}</span>{{ end }}</a></h1>
 	<nav id="nav">
 			<!-- top menu start-->
 			<ul>
@@ -21,7 +21,7 @@
 						</li>
 					{{end}}
 				{{end}}
-				<li><a href="#" class="button special">Sign Up</a></li>
+				<li><a href="#" class="button special">Hire Me</a></li>
 			</ul>
 			<!-- top menu end-->
 	</nav>

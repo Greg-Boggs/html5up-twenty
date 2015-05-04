@@ -13,7 +13,7 @@
 		<header>
 			<h2>{{ .Title }}</h2>
 		</header>
-		{{ with .Site.Params.tagline }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+		{{ with .Site.Params.intro }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
 		<footer>
 			<ul class="buttons vertical">
 				<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
@@ -169,8 +169,8 @@
 		</header>
 		<footer>
 			<ul class="buttons">
-				<li><a href="#" class="button special">Take My Money</a></li>
-				<li><a href="#" class="button">LOL Wut</a></li>
+				<li><a href="#" class="button">Take My Money</a></li>
+				<li><a href="#" class="button special">LOL Wut</a></li>
 			</ul>
 		</footer>
 	</section>

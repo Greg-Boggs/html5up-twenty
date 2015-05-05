@@ -1,8 +1,28 @@
 {{ partial "head.html" . }}
-<div class="content container">
-  <div class="post">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </div>
-</div>
+
+<!-- Main -->
+<article id="main">
+	<header class="special container">
+		<span class="icon {{ .Params.icon }}"></span>
+		<h2>{{ .Title }}</h2>
+		<p>{{ .Params.subtitle }}</p>
+	</header>
+
+	<!-- One -->
+	<section class="wrapper style4 container">
+		<div class="row 150%">
+			{{ if isset .Params "left-sidebar" }}{{ partial "sidebar.html" . }}{{end}}
+
+			<!-- Content -->
+			<div class="8u 12u(narrower)">
+				<div class="content">
+					<section>
+						{{ .Content }}
+					</section>
+				</div>
+			</div>
+			{{ if isset .Params "right-sidebar" }}{{ partial "sidebar.html" . }}{{end}}
+
+</article>
+{{ partial "related-posts.html" . }}
 {{ partial "foot.html" . }}

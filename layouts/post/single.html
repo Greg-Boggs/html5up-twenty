@@ -1,4 +1,5 @@
 {{ partial "head.html" . }}
+{{ if isset .Params "left-sidebar" }}{{ partial "sidebar.html" . }}{{end}}
 <div class="content container">
   <div class="post">
     <h1>{{ .Title }}</h1>
@@ -16,5 +17,6 @@
     </div>
   </div>
 </div>
-{{ partial "related-posts" . }}
+{{ if isset .Params "right-sidebar" }}{{ partial "sidebar.html" . }}{{end}}
+{{ partial "related-posts.html" . }}
 {{ partial "foot.html" . }}

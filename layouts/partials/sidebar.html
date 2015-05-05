@@ -1,14 +1,29 @@
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      {{ with .Site.Params.gravatarHash }}<img src="http://www.gravatar.com/avatar/{{ . }}?s=200" alt="gravatar">{{ end }}
-      <h1>{{ .Site.Author.name }}</h1>
-
-    </div>
-    <ul class="sidebar-nav">
-      {{ range .Site.Menus.main }}
-        <li class="sidebar-nav-item"><a href="{{ .Url }}">{{ .Name }}</a></li>
-      {{end}}
-    </ul>
-  </div>
+<!-- Sidebar -->
+<div class="4u 12u(narrower)">
+	<div class="sidebar">
+		<section>
+			<a href="#" class="image featured"><img src="/images/pic03.jpg" alt="" /></a>
+			<header>
+				<h3>Magna Feugiat</h3>
+			</header>
+			<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..</p>
+			<footer>
+				<ul class="buttons">
+					<li><a href="#" class="button small">Learn More</a></li>
+				</ul>
+			</footer>
+		</section>
+		<section>
+			<a href="#" class="image featured"><img src="/images/pic03.jpg" alt="" /></a>
+			<header>
+				<h3>Amet Lorem Tempus</h3>
+			</header>
+			<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+			<footer>
+				<ul class="buttons">
+					<li><a href="#" class="button small">Learn More</a></li>
+				</ul>
+			</footer>
+		</section>
+	</div>
 </div>

@@ -13,7 +13,7 @@
 		<header>
 			<h2>{{ .Title }}</h2>
 		</header>
-		{{ with .Site.Params.intro }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+		{{ with .Site.Params.intro }}<p class="lead">{{ . }}</p>{{ end }}
 		<footer>
 			<ul class="buttons vertical">
 				<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>

@@ -1,15 +1,32 @@
-{{ $baseurl := .Site.BaseUrl }}
-<div class="related-posts">
-<h3>Related Posts</h3>
-  <ul>
-    {{ $page_link := .Permalink }}
-    {{ $categories := .Params.categories }}
-    {{ range .Site.Recent }}
-    {{ $page := . }}
-    {{ $has_common_categories := intersect $categories .Params.categories | len | lt 0 }}
-      {{ if and $has_common_categories (ne $page_link $page.Permalink) }}
-        <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
-      {{ end }}
-    {{ end }}
-  </ul>
-</div>
+<!-- Two -->
+<section class="wrapper style1 container special">
+	<div class="row">
+		{{ $baseurl := .Site.BaseUrl }}
+		<div class="related-posts">
+		<h3>Related Posts</h3>
+			<ul>
+				{{ $page_link := .Permalink }}
+				{{ $categories := .Params.categories }}
+				{{ range .Site.Recent }}
+				{{ $page := . }}
+				{{ $has_common_categories := intersect $categories .Params.categories | len | lt 0 }}
+					{{ if and $has_common_categories (ne $page_link $page.Permalink) }}
+						<div class="4u 12u(narrower)">
+							<section>
+								<header>
+									<h3>Probably Something</h3>
+								</header>
+								<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+								<footer>
+									<ul class="buttons">
+										<li><a href="{{ $page.Permalink }}" class="button small">{{ $page.Title }}</a></li>
+									</ul>
+								</footer>
+							</section>
+						</div>
+					{{ end }}
+				{{ end }}
+			</ul>
+		</div>
+	</div>
+</section>

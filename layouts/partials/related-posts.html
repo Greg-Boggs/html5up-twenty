@@ -5,17 +5,18 @@
 		<div class="related-posts">
 			<ul>
 				{{ $page_link := .Permalink }}
-				{{ $categories := .Params.categories }}
+				{{ $tags := .Params.tags }}
 				{{ range .Site.Recent }}
 				{{ $page := . }}
-				{{ $has_common_categories := intersect $categories .Params.categories | len | lt 0 }}
-					{{ if and $has_common_categories (ne $page_link $page.Permalink) }}
+				{{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+					{{ if and $has_common_tags (ne $page_link $page.Permalink) }}
 						<div class="4u 12u(narrower)">
 							<section>
+								{{ with .Params.image }}<a href="$page.Permalink" class="image featured"><img src="/images/{{ . }}" alt="" /></a>{{end}}
 								<header>
-									<h3>Probably Something</h3>
+									<h3>{{ .Title }}</h3>
 								</header>
-								<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+								<p>{{ .Summary }}</p>
 								<footer>
 									<ul class="buttons">
 										<li><a href="{{ $page.Permalink }}" class="button small">{{ $page.Title }}</a></li>

@@ -14,7 +14,7 @@
 			{{ if isset .Params "left-sidebar" }}{{ partial "sidebar.html" . }}{{end}}
 
 			<!-- Content -->
-			<div class="8u 12u(narrower)">
+			<div class="{{ if isset .Params "no-sidebar" }}12{{else}}8{{end}}u 12u(narrower)">
 				<div class="content">
 					<section>
 						{{ .Content }}

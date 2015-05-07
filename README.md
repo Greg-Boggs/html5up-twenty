@@ -5,6 +5,35 @@ This is Twenty, a minimal, multi-page responsive site template by html5up.com.
 It's minimally designed, fully responsive, built on HTML5/CSS3/skel,
 released for free under the Creative Commons Attribution 3.0 license.
 
+Usage
+-----
+
+This theme has 3 content sections on each page. So, I created two related posts sections. One section is in the sidebar, 
+the other is below the post content. To place content on a page sidebar, set the post category, and to make content appear 
+below the content, set the tag. 
+
+    tags = [
+      "go",
+      "golang",
+      "hugo",
+      "development",
+    ]
+    categories = [
+      "Development",
+      "golang",
+    ]
+
+The theme also gives you the option to display a theme with a left-sidebar, right-sidebar 
+or no sidebar. To use these styles on a post, set the theme and left sidebar front matter.
+
+  theme = "left-sidebar"
+  left-sidebar = "true"
+  
+To set something with a right-sidebar use:
+
+  theme = "right-sidebar"
+  right-sidebar = "true"
+
 License
 -------
 	Hugo Theme:

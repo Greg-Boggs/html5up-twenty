@@ -1,5 +1,7 @@
 <!-- Header -->
-<header id="header" {{ if isset .Params "theme" }}{{else}}class="alt"{{end}}>
+<header id="header"{{ $title := (.Title | title ) }}
+				{{ $siteTitle := (.Site.Title) }}
+				{{ if eq $siteTitle $title }} class="alt"{{end}}>
 	<h1 id="logo"><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }} {{ with .Site.Params.tagline }}<span>- {{ . }}</span>{{ end }}</a></h1>
 	<nav id="nav">
         <!-- top menu start-->

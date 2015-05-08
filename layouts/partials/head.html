@@ -40,5 +40,10 @@
   <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}">
   <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ if gt $index 0 }},{{ end }}{{ . }}{{ else }}{{ .Site.Params.defaultKeywords }}{{ end }}">
 </head>
-{{ with .Params.theme }}<body class="{{ . }}">{{else}}<body class="index">{{ end }}
-  {{ partial "top.html" . }}
+<body class="
+{{ $title := (.Title | title ) }}
+{{ $siteTitle := (.Site.Title) }}
+{{ if eq $siteTitle $title }}index{{ end }}
+{{ with .Params.theme }} {{ . }} {{ end }}
+">
+{{ partial "top.html" . }}

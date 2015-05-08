@@ -5,6 +5,17 @@ This is Twenty, a minimal, multi-page responsive site template by html5up.com.
 It's minimally designed, fully responsive, built on HTML5/CSS3/skel,
 released for free under the Creative Commons Attribution 3.0 license.
 
+Features
+--------
+Related Content
+Contact Form
+Optional sidebars per page
+Blog
+Drop down menu
+JS Scroller
+Featured images
+Icons per post
+
 Usage
 -----
 
@@ -33,6 +44,13 @@ To set something with a right-sidebar use:
 
   theme = "right-sidebar"
   right-sidebar = "true"
+  
+
+Content Types
+-----
+Post: Used for pages. I know, I'm a rebel.
+blog: Used for blog entries.
+form: Used for the contact form.
 
 License
 -------

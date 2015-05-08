@@ -48,7 +48,7 @@ To set something with a right-sidebar use:
 
 Content Types
 -----
-Post: Used for pages. I know, I'm a rebel.
+Page: Used for pages. I know.
 blog: Used for blog entries.
 form: Used for the contact form.
 

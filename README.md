@@ -38,14 +38,9 @@ The theme also gives you the option to display a theme with a left-sidebar, righ
 or no sidebar. To use these styles on a post, set the theme and left sidebar front matter.
 
   theme = "left-sidebar"
-  left-sidebar = "true"
-  
-To set something with a right-sidebar use:
-
   theme = "right-sidebar"
-  right-sidebar = "true"
+  theme = "no-sidebar"
   
-
 Content Types
 -----
 Page: Used for pages. I know.
